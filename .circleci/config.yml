@@ -23,5 +23,5 @@ jobs:
            docker login -e $dockerhub_email -u $dockerhub_userid -p $dockerhub_pwd
            docker tag dockerapp_dockerapp $dockerhub_userid/dockerapp:$CIRCLE_SHA1
            docker tag dockerapp_dockerapp $dockerhub_userid/dockerapp:latest
-           docker push $dockerhub_userid/dockerapp:$circle_sha1
+           docker push $dockerhub_userid/dockerapp:$CIRCLE_SHA1
            docker push $dockerhub_userid/dockerapp:latest
